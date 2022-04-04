@@ -12,6 +12,10 @@ export class AppComponent {
     window.open('https://booksy.com/pl-pl/122799_barberia-fryzjer-meski-i-golibroda_barber-shop_16979_gadki#ba_s=sh_1', '_blank')
   }
 
+  goToMsStudio(){
+    window.open('https://booksy.com/pl-pl/132037_ms-studio-urody_salon-kosmetyczny_16979_gadki', '_blank')
+  }
+
   openFacebook(){
     window.open('https://www.facebook.com/Zielony-Gaj-100625792599151', '_blank')
   }
