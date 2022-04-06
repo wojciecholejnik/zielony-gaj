@@ -8,10 +8,22 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url('../src/assets/forest-background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+// body {
+//     background-image: url('../src/assets/forest-background.jpg');
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     background-position: center;
+//     background-size: cover;
+// }
+
+#background_wrap {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-image: url('./assets//forest-background.jpg');
     background-size: cover;
 }

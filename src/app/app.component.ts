@@ -18,7 +18,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     window.scrollTo({top: 0, behavior: 'auto'});
     window.onbeforeunload = function() {window.scrollTo(0,0);}
-
   }
   ngAfterViewInit(): void {
     window.scrollTo({top: 0, behavior: 'auto'});
