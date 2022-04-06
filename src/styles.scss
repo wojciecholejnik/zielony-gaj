@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './app/mixins.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -7,5 +9,9 @@
 }
 
 body {
-    background-color: rgba(0, 128, 0, 0.3);
+    background-image: url('../src/assets/forest-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }

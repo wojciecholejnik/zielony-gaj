@@ -1,26 +1,47 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { config } from 'src/assets/config';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
+  barberiaTel: string;
+  msStudioTel: string;
+
+  constructor(){
+    this.barberiaTel = config.barberia.phone;
+    this.msStudioTel = config.msStudio.phone;
+  }
+
+  ngOnInit(): void {
+    window.scrollTo({top: 0, behavior: 'auto'});
+    window.onbeforeunload = function() {window.scrollTo(0,0);}
+
+  }
+  ngAfterViewInit(): void {
+    window.scrollTo({top: 0, behavior: 'auto'});
+  }
   title = 'zielony-gaj';
 
   goToBarberia(){
-    window.open('https://booksy.com/pl-pl/122799_barberia-fryzjer-meski-i-golibroda_barber-shop_16979_gadki#ba_s=sh_1', '_blank')
+    window.open(config.barberia.booksyURL, '_blank')
   }
 
   goToMsStudio(){
-    window.open('https://booksy.com/pl-pl/132037_ms-studio-urody_salon-kosmetyczny_16979_gadki', '_blank')
+    window.open(config.msStudio.booksyURL, '_blank')
   }
 
   openFacebook(){
-    window.open('https://www.facebook.com/Zielony-Gaj-100625792599151', '_blank')
+    window.open(config.zielonyGaj.facebookURL, '_blank')
   }
 
   openInsta(){
-    window.open('https://www.instagram.com/explore/locations/100625792599151/zielony-gaj/?hl=pl', '_blank')
+    window.open(config.zielonyGaj.instagramURL, '_blank')
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
   }
 }
