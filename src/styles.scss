@@ -27,3 +27,22 @@
     background-image: url('./assets//forest-background.jpg');
     background-size: cover;
 }
+
+body > app-root > div:nth-child(2) > app-barberia-about > div > div.content > div.description > carousel > div {
+    width: 80%;
+    height: 200px;
+    margin:0 auto;
+
+    img {
+        display: block; 
+        max-width: 100%; 
+        max-height: 200px;
+        margin: 0 auto;
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        background-color: #000000c2;
+        padding: 10px;
+        border-radius: 50%;
+    }
+}
