@@ -71,13 +71,14 @@
 
 .content {
     width: 95%;
-    height: 65%;
+    max-height: 65%;
     border-radius: 5px;
     border: 1px solid black;
     background: #ffffffde;
     position: relative;
     @include xs {
-        height: 80%;
+        max-height: 80%;
+        padding-bottom: 65px;
     }
 
     .description {
@@ -85,6 +86,7 @@
 
         p {
             margin-bottom: 2px;
+            font-size: 14px;
         }
     }
 }
